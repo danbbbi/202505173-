@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3D GPS 웹앱</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container text-center my-5">
+    <h1>3D GPS 위치 탐색</h1>
+
+    <!-- 건물 지도 -->
+    <div id="building-container">
+      <img src="https://via.placeholder.com/400x600?text=Building+Map" id="building-map" class="img-fluid" alt="Building Map" />
+    </div>
+
+    <div class="mt-4">
+      <h3>1. 출발점 선택</h3>
+      <p>건물 지도를 클릭하여 출발점을 선택하세요.</p>
+    </div>
+
+    <div id="floor-container" class="mt-5">
+      <h3>2. 층 선택</h3>
+      <div class="row">
+        <div class="col-4">
+          <button id="floor-1" class="btn btn-secondary w-100">1층</button>
+        </div>
+        <div class="col-4">
+          <button id="floor-2" class="btn btn-secondary w-100">2층</button>
+        </div>
+        <div class="col-4">
+          <button id="floor-3" class="btn btn-secondary w-100">3층</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 팝업 -->
+    <div id="popup" class="popup">
+      <div id="popup-content">
+        <h3>선택된 위치 정보</h3>
+        <p id="final-location">출발점: </p>
+        <p id="final-floor">층: </p>
+        <p id="final-distance">출발점과의 거리: </p>
+        <button id="close-popup" class="btn btn-primary">닫기</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
